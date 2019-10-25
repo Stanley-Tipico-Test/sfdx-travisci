@@ -15,8 +15,8 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
-  --username $USERNAME --setdefaultdevhubusername -a DevHub
+- sfdx force:auth:jwt:grant --clientid 3MVG9Ve.2wqUVx_au0Lq00iadjTNV1syvPJca4kFdoIFNDcjjXbUdhpEx9fkFVMtfuad8ETdSvRKfmKKMQke. --jwtkeyfile assets/server.key
+  --username stanley.yin@tipico.com.devorg --setdefaultdevhubusername -a DevHub
 script:
 - sfdx force:org:create -v DevHub -s -f C:/Users/yins/sfdx-travisci/config/project-scratch-def.json
   -a ciorg --wait 3
