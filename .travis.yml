@@ -19,7 +19,7 @@ before_install:
   --username stanley.yin@tipico.com.devorg --setdefaultdevhubusername -a DevHub
 script:
 - sfdx force:org:create -v DevHub -s -f C:/Users/yins/sfdx-travisci/config/project-scratch-def.json
-  -a ciorg --wait 3
+  -a "ciorg" --wait 3
 - sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
